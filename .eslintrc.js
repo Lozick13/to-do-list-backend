@@ -3,6 +3,14 @@ module.exports = {
   env: {
     node: true,
   },
+  overrides: [
+    {
+      files: ["**/*/*.test.js"],
+      plugins: ["jest"],
+      extends: ["plugin:jest/recommended"],
+      rules: { "jest/prefer-expect-assertions": "off" },
+    },
+  ],
   extends: [
     "plugin:vue/vue3-essential",
     "eslint:recommended",
